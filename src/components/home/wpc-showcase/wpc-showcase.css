@@ -1,0 +1,45 @@
+.wpc-showcase__background-image {
+  object-fit: cover;
+  transition: opacity 700ms ease;
+}
+
+.wpc-showcase__board-shadow {
+  filter: drop-shadow(0 28px 48px rgb(15 17 21 / 0.22));
+}
+
+.dark .wpc-showcase__board-shadow {
+  filter: drop-shadow(0 32px 56px rgb(0 0 0 / 0.45));
+}
+
+.wpc-showcase__selector-active {
+  position: relative;
+}
+
+.wpc-showcase__selector-active::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.35rem;
+  bottom: -0.45rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-copper), var(--brand-orange));
+  box-shadow: 0 0 14px rgb(255 193 7 / 0.45);
+}
+
+.wpc-showcase__info-card {
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-soft);
+}
+
+.dark .wpc-showcase__info-card {
+  border-color: color-mix(in srgb, var(--foreground) 12%, transparent);
+  background: color-mix(in srgb, var(--surface-elevated) 68%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wpc-showcase__background-image {
+    transition: none;
+  }
+}

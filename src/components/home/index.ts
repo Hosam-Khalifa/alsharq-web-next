@@ -1,0 +1,14 @@
+export { HeroSection } from "./hero";
+export { DoorShowcaseSection } from "./door-showcase";
+export { WpcShowcaseSection } from "./wpc-showcase";
+export { TrustSection } from "./trust/TrustSection";
+export { ProductCategories } from "./categories/ProductCategories";
+export { AboutPreview } from "./about-preview/AboutPreview";
+export { FeaturedProducts } from "./featured-products/FeaturedProducts";
+export { FeaturedProjects } from "./featured-projects/FeaturedProjects";
+export { CertificatesPreview } from "./certificates/CertificatesPreview";
+export { CertificatesTrustSection } from "./certificates-trust/CertificatesTrustSection";
+export { PartnersSection } from "./partners";
+export { DiscoverCtaSection } from "./discover-cta/DiscoverCtaSection";
+export { CTASection } from "./cta/CTASection";
+export { ContactSection } from "./contact/ContactSection";

@@ -1,0 +1,22 @@
+/* About page motion helpers */
+
+.about-floating-image {
+  animation: about-float 6s ease-in-out infinite;
+}
+
+@keyframes about-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-floating-image {
+    animation: none;
+  }
+}

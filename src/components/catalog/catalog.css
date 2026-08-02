@@ -1,0 +1,89 @@
+.catalog-hero {
+  isolation: isolate;
+}
+
+.catalog-hero__bg-image {
+  animation: catalog-kenburns 22s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+.catalog-hero__veil {
+  background:
+    radial-gradient(ellipse 70% 55% at 70% 40%, rgb(230 126 34 / 0.18), transparent 62%),
+    linear-gradient(180deg, rgb(8 10 14 / 0.55) 0%, rgb(8 10 14 / 0.72) 45%, rgb(8 10 14 / 0.94) 100%);
+}
+
+.catalog-hero__grain {
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+.catalog-studio {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgb(230 126 34 / 0.08), transparent 55%),
+    var(--background);
+}
+
+.catalog-studio__stage {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 55%, rgb(230 126 34 / 0.1), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 88%, transparent), var(--surface-muted));
+}
+
+.catalog-studio__door {
+  animation: catalog-door-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.catalog-filmstrip {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.catalog-filmstrip::-webkit-scrollbar {
+  display: none;
+}
+
+.catalog-gallery__item {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.catalog-gallery__item:hover {
+  transform: scale(1.02);
+}
+
+@keyframes catalog-kenburns {
+  from {
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: scale(1.14) translate3d(-1.5%, 1%, 0);
+  }
+}
+
+@keyframes catalog-door-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog-hero__bg-image,
+  .catalog-studio__door,
+  .catalog-gallery__item {
+    animation: none;
+    transition: none;
+  }
+
+  .catalog-gallery__item:hover {
+    transform: none;
+  }
+}
