@@ -7,7 +7,7 @@ import { FileDownloadLink } from "@/components/shared/file-download-link/file-do
 import { routes } from "@/config/routes";
 import type { Locale } from "@/types";
 
-const DISCOVER_BG = "/images/Homehero/discover-bg%20copy.webp";
+const DISCOVER_BG = "/images/Homehero/discover-bg.webp";
 
 interface DiscoverCtaSectionProps {
   locale: Locale;

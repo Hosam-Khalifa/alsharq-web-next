@@ -23,7 +23,7 @@ interface HeroFeatureBarProps {
 
 export function HeroFeatureBar({ items, ariaLabel }: HeroFeatureBarProps) {
   return (
-    <div className="factory-hero__feature-bar pointer-events-none absolute inset-x-0 bottom-0 z-20 px-4 pb-5 sm:px-6 sm:pb-6 md:pb-7">
+    <div className="factory-hero__feature-bar pointer-events-none absolute inset-x-0 bottom-0 z-[2] px-4 pb-5 sm:px-6 sm:pb-6 md:pb-7">
       <ul
         aria-label={ariaLabel}
         className="pointer-events-auto mx-auto grid max-w-5xl grid-cols-1 gap-1 rounded-[24px] border border-white/10 bg-[rgba(20,20,20,0.55)] p-3 shadow-[0_18px_50px_rgb(0_0_0/0.28)] backdrop-blur-[18px] sm:grid-cols-2 sm:p-4 md:grid-cols-3 md:gap-0 md:p-5"

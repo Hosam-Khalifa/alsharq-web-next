@@ -6,7 +6,7 @@ import { routes } from "@/config/routes";
 import type { Locale } from "@/types";
 import { CERTIFICATE_STACK_IMAGES } from "./data";
 
-const CERTIFICATES_BG = "/images/Homehero/Certificates-bg%20copy.webp";
+const CERTIFICATES_BG = "/images/Homehero/certificates-bg.webp";
 
 interface CertificatesTrustSectionProps {
   locale: Locale;
@@ -16,7 +16,7 @@ export async function CertificatesTrustSection({ locale }: CertificatesTrustSect
   const t = await getTranslations({ locale, namespace: "home" });
 
   return (
-    <section className="relative z-20 overflow-visible border-y border-border py-14 md:py-16 lg:py-20">
+    <section className="relative z-[1] overflow-visible border-y border-border py-14 md:py-16 lg:py-20">
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
           src={CERTIFICATES_BG}

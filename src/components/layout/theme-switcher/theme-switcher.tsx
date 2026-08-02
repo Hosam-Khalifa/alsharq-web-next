@@ -27,7 +27,12 @@ export function ThemeSwitcher() {
   }, [mounted, resolvedTheme, setTheme, theme]);
 
   if (!mounted) {
-    return <div className="h-10 w-20 rounded-md border border-border bg-muted/40" aria-hidden="true" />;
+    return (
+      <div
+        className="h-9 w-[4.5rem] rounded-md border border-border bg-muted/40 sm:h-10 sm:w-20"
+        aria-hidden="true"
+      />
+    );
   }
 
   const activeTheme = theme === "dark" || theme === "light" ? theme : resolvedTheme === "dark" ? "dark" : "light";
@@ -38,12 +43,17 @@ export function ThemeSwitcher() {
   ];
 
   return (
-    <div className="flex items-center gap-1 rounded-md border border-border p-1" role="group" aria-label={t("label")}>
+    <div
+      className="flex items-center gap-0.5 rounded-md border border-border p-0.5 sm:gap-1 sm:p-1"
+      role="group"
+      aria-label={t("label")}
+    >
       {options.map(({ value, label, icon: Icon }) => (
         <Button
           key={value}
           variant={activeTheme === value ? "primary" : "ghost"}
           size="sm"
+          className="min-h-9 min-w-9 px-2 sm:min-h-8 sm:px-3"
           onClick={() => setTheme(value)}
           aria-pressed={activeTheme === value}
           aria-label={label}

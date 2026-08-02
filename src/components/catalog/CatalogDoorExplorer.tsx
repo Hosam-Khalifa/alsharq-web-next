@@ -34,14 +34,16 @@ export function CatalogDoorExplorer() {
     );
   }, [query, locale]);
 
-  useEffect(() => {
-    if (!filteredFinishes.some((finish) => finish.code === activeCode)) {
-      setActiveCode(filteredFinishes[0]?.code ?? "");
-    }
-  }, [filteredFinishes, activeCode]);
+  const resolvedActiveCode = filteredFinishes.some((finish) => finish.code === activeCode)
+    ? activeCode
+    : (filteredFinishes[0]?.code ?? "");
+
+  if (resolvedActiveCode !== activeCode) {
+    setActiveCode(resolvedActiveCode);
+  }
 
   const activeFinish: CatalogFinish | undefined =
-    catalogFinishes.find((finish) => finish.code === activeCode) ??
+    catalogFinishes.find((finish) => finish.code === resolvedActiveCode) ??
     filteredFinishes[0] ??
     catalogFinishes[0];
 

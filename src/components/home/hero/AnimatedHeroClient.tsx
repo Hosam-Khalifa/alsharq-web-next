@@ -121,33 +121,35 @@ export function AnimatedHeroClient({
         <p className="factory-hero__subtitle max-w-[36ch] text-sm leading-relaxed sm:text-base lg:text-lg">
           {subtitle}
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap">
           {primaryHref.startsWith("#") ? (
             <a
               href={primaryHref}
-              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-6 text-base font-medium text-primary-foreground transition-colors hover:bg-primary-hover active:bg-primary-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex h-11 w-full items-center justify-center rounded-md bg-primary px-6 text-base font-medium text-primary-foreground transition-colors hover:bg-primary-hover active:bg-primary-active focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
             >
               {primaryLabel}
             </a>
           ) : (
-            <Link href={primaryHref}>
-              <Button size="lg">{primaryLabel}</Button>
+            <Link href={primaryHref} className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto">
+                {primaryLabel}
+              </Button>
             </Link>
           )}
           {secondaryLabel && secondaryHref ? (
             secondaryHref.startsWith("#") ? (
               <a
                 href={secondaryHref}
-                className="inline-flex h-11 items-center justify-center rounded-md border border-[rgb(245_245_244/0.55)] bg-transparent px-6 text-base font-medium text-[#f5f5f4] transition-colors hover:border-primary hover:bg-accent-soft hover:text-[#f5f5f4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="inline-flex h-11 w-full items-center justify-center rounded-md border border-[rgb(245_245_244/0.55)] bg-transparent px-6 text-base font-medium text-[#f5f5f4] transition-colors hover:border-primary hover:bg-accent-soft hover:text-[#f5f5f4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
               >
                 {secondaryLabel}
               </a>
             ) : (
-              <Link href={secondaryHref}>
+              <Link href={secondaryHref} className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-[rgb(245_245_244/0.55)] text-[#f5f5f4] hover:border-primary hover:bg-accent-soft hover:text-[#f5f5f4]"
+                  className="w-full border-[rgb(245_245_244/0.55)] text-[#f5f5f4] hover:border-primary hover:bg-accent-soft hover:text-[#f5f5f4] sm:w-auto"
                 >
                   {secondaryLabel}
                 </Button>

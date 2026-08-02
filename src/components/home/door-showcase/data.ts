@@ -3,7 +3,7 @@ import type { DoorProduct } from "./types";
 const ASSET_BASE = "/images/door-showcase";
 
 export const DOOR_SHOWCASE_ASSETS = {
-  backgroundLight: `${ASSET_BASE}/optional/door-showcase-bg-light%20.webp`,
+  backgroundLight: `${ASSET_BASE}/optional/door-showcase-bg-light.webp`,
   backgroundDark: `${ASSET_BASE}/optional/door-showcase-bg-dark.webp`,
   platform: `${ASSET_BASE}/optional/door-platform.png`,
 } as const;

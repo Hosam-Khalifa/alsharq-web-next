@@ -74,7 +74,7 @@
 }
 
 .factory-hero__feature-bar {
-  z-index: 20;
+  z-index: 2;
 }
 
 .factory-hero__title {
@@ -102,5 +102,20 @@
 
   .factory-hero__content {
     max-width: 100%;
+    padding-block: clamp(5.5rem, 12svh, 7rem) clamp(9.5rem, 20svh, 12rem);
+  }
+
+  .factory-hero__subtitle {
+    font-size: clamp(0.95rem, 3.6vw, 1.05rem);
+  }
+}
+
+@media (max-height: 700px) and (max-width: 1023px) {
+  .factory-hero {
+    min-height: 100dvh;
+  }
+
+  .factory-hero__content {
+    padding-block: 5rem 8.5rem;
   }
 }

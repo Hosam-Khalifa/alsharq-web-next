@@ -72,7 +72,7 @@ export function GalleryLightbox({ images, index, onClose, onChange }: GalleryLig
     <AnimatePresence>
       {open && image ? (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-[rgb(8_10_14/0.94)] p-3 sm:p-6"
+          className="fixed inset-0 z-[var(--z-modal)] flex items-center justify-center bg-[rgb(8_10_14/0.94)] p-3 sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label={t("imageOf", { current: (index ?? 0) + 1, total: images.length })}

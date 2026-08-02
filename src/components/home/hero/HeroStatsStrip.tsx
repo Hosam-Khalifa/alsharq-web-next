@@ -24,7 +24,7 @@ export function HeroStatsStrip({ items, ariaLabel }: HeroStatsStripProps) {
   return (
     <section
       aria-label={ariaLabel}
-      className="relative z-30 -mt-5 rounded-t-[1.75rem] bg-white px-4 pb-8 pt-8 shadow-[0_-8px_40px_rgb(15_17_21/0.08)] dark:bg-surface sm:-mt-6 sm:rounded-t-[2rem] sm:px-6 sm:pb-10 sm:pt-9 md:-mt-7"
+      className="relative z-[1] -mt-5 rounded-t-[1.75rem] bg-white px-4 pb-8 pt-8 shadow-[0_-8px_40px_rgb(15_17_21/0.08)] dark:bg-surface sm:-mt-6 sm:rounded-t-[2rem] sm:px-6 sm:pb-10 sm:pt-9 md:-mt-7"
     >
       <ul className="mx-auto grid max-w-5xl grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:divide-border">
         {items.map((item) => {

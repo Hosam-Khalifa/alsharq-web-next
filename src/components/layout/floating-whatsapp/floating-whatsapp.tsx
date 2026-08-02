@@ -8,7 +8,7 @@ export function FloatingWhatsApp() {
       href={buildWhatsAppUrl(company.whatsapp)}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 end-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-elevated)] hover:bg-primary-hover"
+      className="floating-whatsapp fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] end-[max(1rem,env(safe-area-inset-inline-end))] z-[var(--z-floating)] inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-elevated)] hover:bg-primary-hover"
       aria-label="WhatsApp"
     >
       <MessageCircle className="h-5 w-5" />
