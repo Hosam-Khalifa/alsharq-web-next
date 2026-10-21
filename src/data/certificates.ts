@@ -122,6 +122,16 @@ export const certificates: Certificate[] = [
     height: 2369,
     order: 11,
   },
+  {
+    id: "cert-12",
+    slug: "certificate-12",
+    title: { ar: "شهادة 12", en: "Certificate 12" },
+    orientation: "landscape",
+    image: `${ASSET_BASE}/Certificates-12.jpg`,
+    width: 3412,
+    height: 2369,
+    order: 12,
+  },
 ];
 
 export function getCertificateBySlug(slug: string) {

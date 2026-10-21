@@ -18,18 +18,29 @@ export async function Header({ locale }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-[var(--header-background)] backdrop-blur supports-[backdrop-filter]:bg-[color-mix(in_srgb,var(--header-background)_92%,transparent)]">
-      <div className="container mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-6 sm:py-3 lg:px-8">
+      <div className="container mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 sm:gap-4 sm:px-6 sm:py-3 lg:gap-4 lg:px-6 xl:gap-5 xl:px-8">
         <Link
           href={routes.home()}
-          className="min-w-0 shrink transition-opacity hover:opacity-90"
+          className="relative z-10 shrink-0 overflow-hidden transition-opacity hover:opacity-90"
           aria-label={t("nav.home")}
         >
-          <BrandLogo locale={locale} priority className="h-8 w-[7.5rem] sm:h-9 sm:w-[8.75rem] lg:h-10 lg:w-[9.25rem]" />
+          <BrandLogo
+            locale={locale}
+            priority
+            className="h-8 w-[7.5rem] sm:h-9 sm:w-[8.75rem] lg:h-9 lg:w-[9rem] xl:h-10 xl:w-[10rem]"
+          />
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex" aria-label={t("nav.mainNavigation")}>
+        <nav
+          className="hidden min-w-0 flex-1 items-center justify-center gap-x-2.5 lg:flex xl:gap-x-3.5 2xl:gap-x-5"
+          aria-label={t("nav.mainNavigation")}
+        >
           {mainNavigation.map((item) => (
-            <Link key={item.id} href={item.href()} className="brand-nav-link text-sm">
+            <Link
+              key={item.id}
+              href={item.href()}
+              className="brand-nav-link shrink-0 whitespace-nowrap text-xs xl:text-sm"
+            >
               {t(item.labelKey)}
             </Link>
           ))}

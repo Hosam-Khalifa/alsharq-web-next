@@ -10,6 +10,7 @@
     "catalog": "Catalog",
     "projects": "Projects",
     "gallery": "Gallery",
+    "videos": "Video Gallery",
     "certificates": "Certificates",
     "contact": "Contact",
     "requestQuote": "Request a Quote",
@@ -329,6 +330,24 @@
     "gallery": "Gallery",
     "relatedProducts": "Products used"
   },
+  "videos": {
+    "title": "Video Gallery",
+    "subtitle": "Watch factory videos showcasing production processes, craftsmanship, and manufacturing capabilities.",
+    "eyebrow": "Inside the factory",
+    "heading": "Explore our <highlight>video gallery</highlight>",
+    "intro": "Watch selected factory videos that highlight production lines, manufacturing stages, and the precision behind every WPC product.",
+    "countLabel": "{count} videos",
+    "nowPlaying": "Now playing",
+    "playlistTitle": "Playlist",
+    "playlistAriaLabel": "Video playlist",
+    "playerAriaLabel": "Video gallery player",
+    "videoTitle": "Factory Video {number}",
+    "videoOf": "Video {current} of {total}",
+    "previousVideo": "Previous video",
+    "nextVideo": "Next video",
+    "active": "Playing",
+    "videoUnsupported": "Your browser does not support HTML5 video playback."
+  },
   "gallery": {
     "title": "Gallery",
     "subtitle": "Inside Near East Factory — production lines, craftsmanship, and quality in every frame.",
@@ -561,8 +580,7 @@
     "products": "Products",
     "contact": "Contact",
     "legal": "Legal",
-    "copyright": "© {year} {companyName}. All rights reserved.",
-    "socialTodo": "TODO: Add official social media links."
+    "copyright": "© {year} {companyName}. All rights reserved."
   },
   "forms": {
     "fullName": "Full name",

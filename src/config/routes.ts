@@ -15,6 +15,7 @@ export const routes = {
   catalogBoards: () => "/catalog/boards",
   projects: () => "/projects",
   gallery: () => "/gallery",
+  videos: () => "/videos",
   certificates: () => "/certificates",
   requestQuote: (options?: { category?: "doors" | "boards"; product?: string }) => {
     const params = new URLSearchParams();
@@ -46,6 +47,7 @@ export const staticPaths = [
   "/catalog/boards",
   "/projects",
   "/gallery",
+  "/videos",
   "/certificates",
   "/request-quote",
   "/contact",

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Match next-themes `attribute="class"` — do not use prefers-color-scheme for `dark:`. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Brand constants (shared) */
   --brand-orange: #e67e22;
@@ -263,6 +266,14 @@ html {
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Isolate LTR contact values (phone, WhatsApp, email) inside RTL layouts */
+.ltr-isolate {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: start;
 }
 
 /* Mobile navigation drawer */

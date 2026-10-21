@@ -10,6 +10,7 @@
     "catalog": "الكتالوج",
     "projects": "المشاريع",
     "gallery": "معرض الصور",
+    "videos": "معرض الفيديوهات",
     "certificates": "الشهادات",
     "contact": "اتصل بنا",
     "requestQuote": "اطلب عرض سعر",
@@ -241,7 +242,7 @@
     "noProducts": "لا توجد منتجات في هذه الفئة حالياً.",
     "categories": {
       "wpcDoors": "أبواب WPC",
-      "wpcFoamBoards": "ألواح WPC Foam Boards",
+      "wpcFoamBoards": "ألواح WPC",
       "decorativeCladding": "كسوات الديكور",
       "decorativeProfiles": "قطاعات الديكور"
     }
@@ -328,6 +329,24 @@
     },
     "gallery": "معرض الصور",
     "relatedProducts": "المنتجات المستخدمة"
+  },
+  "videos": {
+    "title": "معرض الفيديوهات",
+    "subtitle": "شاهد فيديوهات المصنع التي تعرض عمليات الإنتاج والحِرَفية وقدرات التصنيع.",
+    "eyebrow": "من داخل المصنع",
+    "heading": "استكشف <highlight>معرض الفيديوهات</highlight>",
+    "intro": "شاهد مجموعة مختارة من فيديوهات المصنع التي تُبرز خطوط الإنتاج ومراحل التصنيع والدقة خلف كل منتج WPC.",
+    "countLabel": "{count} فيديو",
+    "nowPlaying": "يُعرض الآن",
+    "playlistTitle": "قائمة التشغيل",
+    "playlistAriaLabel": "قائمة فيديوهات المعرض",
+    "playerAriaLabel": "مشغّل معرض الفيديوهات",
+    "videoTitle": "فيديو المصنع {number}",
+    "videoOf": "فيديو {current} من {total}",
+    "previousVideo": "الفيديو السابق",
+    "nextVideo": "الفيديو التالي",
+    "active": "قيد التشغيل",
+    "videoUnsupported": "متصفحك لا يدعم تشغيل فيديو HTML5."
   },
   "gallery": {
     "title": "معرض الصور",
@@ -561,8 +580,7 @@
     "products": "المنتجات",
     "contact": "تواصل",
     "legal": "قانوني",
-    "copyright": "© {year} {companyName}. جميع الحقوق محفوظة.",
-    "socialTodo": "TODO: إضافة روابط التواصل الاجتماعي الرسمية."
+    "copyright": "© {year} {companyName}. جميع الحقوق محفوظة."
   },
   "forms": {
     "fullName": "الاسم الكامل",

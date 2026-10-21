@@ -25,7 +25,12 @@ export function BrandLogo({
   const sharedClassName = "h-full w-full object-contain object-start";
 
   return (
-    <span className={cn("relative inline-flex h-9 w-[8.25rem] sm:h-10 sm:w-[9.25rem]", className)}>
+    <span
+      className={cn(
+        "relative inline-flex h-9 w-[8.25rem] shrink-0 overflow-hidden sm:h-10 sm:w-[9.25rem]",
+        className,
+      )}
+    >
       {variant === "theme" ? (
         <>
           <Image
@@ -34,6 +39,7 @@ export function BrandLogo({
             width={LOGO_WIDTH}
             height={LOGO_HEIGHT}
             priority={priority}
+            sizes="160px"
             className={cn(sharedClassName, "dark:hidden")}
           />
           <Image
@@ -42,6 +48,7 @@ export function BrandLogo({
             width={LOGO_WIDTH}
             height={LOGO_HEIGHT}
             priority={priority}
+            sizes="160px"
             aria-hidden="true"
             className={cn(sharedClassName, "hidden dark:block")}
           />
@@ -53,6 +60,7 @@ export function BrandLogo({
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}
           priority={priority}
+          sizes="160px"
           className={sharedClassName}
         />
       )}

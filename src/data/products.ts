@@ -36,7 +36,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "wpc-foam-boards",
-    nameAr: "ألواح WPC Foam Boards",
+    nameAr: "ألواح WPC",
     nameEn: "WPC Foam Boards",
     descriptionAr: "ألواح WPC للتطبيقات الداخلية والتشطيب.",
     descriptionEn: "WPC boards for interior and finishing applications.",

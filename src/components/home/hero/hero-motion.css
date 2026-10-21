@@ -47,11 +47,16 @@
     transform: none;
   }
 
-  .factory-hero__image {
+  .factory-hero__image,
+  .factory-hero__video {
     transition: none;
   }
 
   .factory-hero__parallax {
     transform: none !important;
+  }
+
+  .factory-hero__video-stack {
+    display: none;
   }
 }

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import { HERO_ASSETS } from "./hero-assets";
 import { HeroFeatureBar, type HeroFeatureItem } from "./HeroFeatureBar";
+import { HeroVideoBackground } from "./HeroVideoBackground";
 import { useReducedMotion } from "./use-reduced-motion";
 import "./factory-hero.css";
 import "./hero-motion.css";
@@ -71,12 +72,7 @@ export function AnimatedHeroClient({
       aria-label={title}
     >
       <div className="factory-hero__media" aria-hidden="true">
-        <div
-          className={cn(
-            "factory-hero__ken-burns factory-hero__parallax",
-            !reducedMotion && "factory-hero__ken-burns--animate",
-          )}
-        >
+        <div className="factory-hero__ken-burns factory-hero__parallax">
           {mounted ? (
             <>
               <Image
@@ -101,6 +97,7 @@ export function AnimatedHeroClient({
                   isDark ? "opacity-100" : "opacity-0",
                 )}
               />
+              {!reducedMotion ? <HeroVideoBackground /> : null}
             </>
           ) : (
             <div className="h-full w-full bg-brand-charcoal" />
